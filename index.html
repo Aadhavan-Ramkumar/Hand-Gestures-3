@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title> Hand Gestures </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: purple; color: white;">
+    <div class="container">
+        <center>
+            <h3 class="btn btn-info Heading"> HAND GESTURES
+                <br>
+                <span> &#128076; </span>
+                <span> &#128077; </span>
+                <span> &#9996; </span>
+                <span> &#9994; </span>
+                <span> &#128079; </span>
+                <span> &#129304; </span>
+            </h3>
+            <br><br>
+            <p style="font-size: 22px; color: white;"> Take a selfie of a gesture to know about its meaning. </p>
+            <p style="color: white;"> The model is trained on the following gestures - </p>
+            <span style="color: white;"> &#128076; | </span>
+            <span style="color: white;"> &#128077; | </span>
+            <span style="color: white;"> &#9996; </span>
+            <br><br>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <label> Webcam View </label>
+                <br><br>
+                <div id="Camera"></div>
+                <br><br>
+                <button onclick="Capture();" class="btn btn-primary"> Capture Image </button>
+                <br><br>
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <label> Prediction - </label>
+                <p style="color: white; font-size: 22px;" class="GestureName" id="GestureName"></p>
+                <p style="font-size: 30px;" class="Gesture" id="Gesture"></p>
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <label> Snapshot - </label>
+                <div id="Result"></div>
+                <br><br>
+                <button onclick="Check();" class="btn btn-success"> Predict Gesture </button>
+            </div>
+        </center>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
